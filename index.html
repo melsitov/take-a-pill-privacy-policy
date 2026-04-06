@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Take a Pill</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #4A90D9;
+      --primary-dark: #2C6FAC;
+      --text: #1a1a2e;
+      --muted: #555e72;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .pill-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    .summary-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+
+    .summary-box h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+
+    .summary-item .icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .summary-item strong {
+      display: block;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .summary-item span {
+      color: var(--muted);
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; color: var(--muted); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    li { margin-bottom: 6px; }
+    li:last-child { margin-bottom: 0; }
+
+    strong { color: var(--text); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    th {
+      text-align: left;
+      background: var(--bg);
+      padding: 10px 12px;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge.warn {
+      background: #fff3e0;
+      color: #e65100;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 32px 24px;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%);
+      border: 1px solid #c5d9f7;
+      border-radius: var(--radius);
+      margin-top: 36px;
+    }
+
+    .contact-box h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .contact-box a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      section { padding: 20px 16px; }
+      .container { padding: 24px 16px 48px; }
+      table { font-size: 0.82rem; }
+      td, th { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="pill-icon">💊</span>
+  <h1>Privacy Policy</h1>
+  <p>Take a Pill — Medicine Reminder &nbsp;·&nbsp; Last updated: April 2026</p>
+</header>
+
+<div class="container">
+
+  <!-- TL;DR summary -->
+  <div class="summary-box">
+    <h2>At a glance</h2>
+    <p>Your health data stays on your device. We do not collect, sell, or share your personal information.</p>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <span class="icon">🔒</span>
+        <div>
+          <strong>Stored locally</strong>
+          <span>All data on your device only</span>
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="icon">🚫</span>
+        <div>
+          <strong>No analytics</strong>
+          <span>No tracking, no crash reports sent</span>
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="icon">📡</span>
+        <div>
+          <strong>Barcode lookup only</strong>
+          <span>Only the barcode number is sent externally</span>
+        </div>
+      </div>
+      <div class="summary-item">
+        <span class="icon">🗂</span>
+        <div>
+          <strong>Manual backup</strong>
+          <span>You control where backups go</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Introduction -->
+  <section>
+    <h2><span class="num">1</span>Introduction</h2>
+    <p>
+      Take a Pill ("the App", "we", "us") is a medicine reminder application built to help you
+      track your medications and dosing schedules. This Privacy Policy explains what information
+      the App accesses, how it is used, and how it is protected.
+    </p>
+    <p>
+      We are committed to protecting your privacy. Because health information is sensitive, the
+      App is designed to keep your data on your device whenever possible.
+    </p>
+  </section>
+
+  <!-- 2. Data we store -->
+  <section>
+    <h2><span class="num">2</span>Data stored on your device</h2>
+    <p>
+      All data you enter is stored locally in an encrypted SQLite database on your device.
+      Nothing is uploaded to our servers automatically.
+    </p>
+    <ul>
+      <li><strong>Medicine information</strong> — name, dosage, unit, quantity, notes, barcode.</li>
+      <li><strong>Schedules</strong> — reminder times, frequency, start and end dates.</li>
+      <li><strong>Consumption history</strong> — whether a dose was taken, skipped, or snoozed, and when.</li>
+      <li><strong>App settings</strong> — theme preference, language, quiet hours, snooze duration.</li>
+    </ul>
+    <p>
+      This data never leaves your device unless you explicitly share it (see <em>Backup &amp; Export</em> below).
+    </p>
+  </section>
+
+  <!-- 3. External network requests -->
+  <section>
+    <h2><span class="num">3</span>External network requests</h2>
+    <p>
+      The App makes network requests <strong>only</strong> when you use the barcode scanner to
+      look up a medicine. In that case, the scanned barcode number is sent to one or more of the
+      following public databases to retrieve the medicine name and dosage:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>What is sent</th>
+          <th>Privacy policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OpenFDA (api.fda.gov)</td>
+          <td>Barcode number only</td>
+          <td><a href="https://open.fda.gov/privacy/" target="_blank" rel="noopener">open.fda.gov/privacy</a></td>
+        </tr>
+        <tr>
+          <td>UPC Item DB (upcitemdb.com)</td>
+          <td>Barcode number only</td>
+          <td><a href="https://www.upcitemdb.com/privacy" target="_blank" rel="noopener">upcitemdb.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Open Food Facts (openfoodfacts.org)</td>
+          <td>Barcode number only</td>
+          <td><a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">openfoodfacts.org/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Open Beauty Facts (openbeautyfacts.org)</td>
+          <td>Barcode number only</td>
+          <td><a href="https://world.openbeautyfacts.org/privacy" target="_blank" rel="noopener">openbeautyfacts.org/privacy</a></td>
+        </tr>
+        <tr>
+          <td>Open Products Facts (openproductsfacts.org)</td>
+          <td>Barcode number only</td>
+          <td><a href="https://world.openproductsfacts.org/privacy" target="_blank" rel="noopener">openproductsfacts.org/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;">
+      <strong>No personal data, health history, or identifying information is ever transmitted</strong>
+      to these or any other external service. The barcode lookup feature is entirely optional —
+      you can add medicines manually without triggering any network request.
+    </p>
+    <p>
+      The App does <strong>not</strong> use any analytics SDK, crash reporting service, advertising
+      network, or any other third-party data collection library.
+    </p>
+  </section>
+
+  <!-- 4. Camera & OCR -->
+  <section>
+    <h2><span class="num">4</span>Camera and image processing</h2>
+    <p>
+      The App requests access to your device camera for two optional features:
+    </p>
+    <ul>
+      <li>
+        <strong>Barcode scanning</strong> — reads the barcode on a medicine package.
+        The camera image is processed locally; only the decoded barcode number is used.
+      </li>
+      <li>
+        <strong>Text (OCR) scanning</strong> — takes a photo of a medicine label and
+        extracts the medicine name and dosage using on-device text recognition (Google ML Kit).
+        The image is never uploaded anywhere; all OCR processing happens entirely on your device.
+      </li>
+    </ul>
+    <p>Photos taken for scanning are not saved to your gallery and are deleted after processing.</p>
+  </section>
+
+  <!-- 5. Notifications -->
+  <section>
+    <h2><span class="num">5</span>Notifications</h2>
+    <p>
+      The App sends local push notifications to remind you to take your medicines at the scheduled
+      times. These notifications are generated entirely on your device — no notification content
+      (medicine names, times, etc.) is transmitted to any server.
+    </p>
+    <p>
+      You can disable notifications at any time through your device settings or within the App.
+    </p>
+  </section>
+
+  <!-- 6. Backup & export -->
+  <section>
+    <h2><span class="num">6</span>Backup and export</h2>
+    <p>
+      The App provides an optional manual backup feature that exports your database to a single
+      file on your device. You can share this file using your device's native share sheet
+      (e.g. email, a cloud storage app, or a messaging app of your choice).
+    </p>
+    <p>
+      <strong>We have no access to your backup files.</strong> Where they are stored and who can
+      access them is determined entirely by you and the service you choose to share them with.
+    </p>
+    <p>
+      Similarly, the PDF adherence report generated by the App is created locally and shared only
+      if you choose to export it. We do not receive a copy.
+    </p>
+  </section>
+
+  <!-- 7. Permissions -->
+  <section>
+    <h2><span class="num">7</span>Device permissions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Why it is needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>CAMERA</code></td>
+          <td>Barcode scanning and OCR label scanning (both optional features)</td>
+        </tr>
+        <tr>
+          <td><code>POST_NOTIFICATIONS</code></td>
+          <td>Displaying medicine reminder notifications</td>
+        </tr>
+        <tr>
+          <td><code>SCHEDULE_EXACT_ALARM</code></td>
+          <td>Delivering reminders at the precise time you set (Android 12+)</td>
+        </tr>
+        <tr>
+          <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+          <td>Re-scheduling reminders automatically after the device restarts</td>
+        </tr>
+        <tr>
+          <td><code>VIBRATE</code></td>
+          <td>Vibration feedback when a notification arrives</td>
+        </tr>
+        <tr>
+          <td><code>USE_FULL_SCREEN_INTENT</code></td>
+          <td>Showing a full-screen alarm notification for urgent reminders</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;">
+      The App does <strong>not</strong> request access to your location, contacts, microphone,
+      call logs, calendar, or any other personal data source.
+    </p>
+  </section>
+
+  <!-- 8. Data retention & deletion -->
+  <section>
+    <h2><span class="num">8</span>Data retention and deletion</h2>
+    <p>
+      All data is stored locally on your device for as long as you use the App. You can delete
+      individual medicines, schedules, and history entries from within the App at any time.
+    </p>
+    <p>
+      To delete all data, clear the App's storage in your device settings or uninstall the App.
+      Because we do not store any data on our servers, there is nothing for us to delete on your behalf.
+    </p>
+  </section>
+
+  <!-- 9. Children -->
+  <section>
+    <h2><span class="num">9</span>Children's privacy</h2>
+    <p>
+      The App is not directed at children under the age of 13. We do not knowingly collect any
+      personal information from children. If you believe a child has provided personal data through
+      the App, please contact us so we can address the situation.
+    </p>
+  </section>
+
+  <!-- 10. Changes -->
+  <section>
+    <h2><span class="num">10</span>Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Changes will be posted on this page
+      with an updated date. We encourage you to review this page periodically.
+      Continued use of the App after changes constitutes your acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-box">
+    <h2>Questions or concerns?</h2>
+    <p style="color: var(--muted); margin-top: 6px;">
+      If you have any questions about this Privacy Policy or the App's data practices,
+      please open an issue on GitHub:
+    </p>
+    <p style="margin-top: 10px;">
+      <a href="https://github.com/melsitov/take-a-pill-privacy-policy/issues" target="_blank" rel="noopener">
+        github.com/melsitov/take-a-pill-privacy-policy/issues
+      </a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Take a Pill. All rights reserved.
+</footer>
+
+</body>
+</html>
