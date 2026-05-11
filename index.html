@@ -232,7 +232,7 @@
 
 <header>
   <img src="logo.png" alt="Take a Pill" class="app-logo" />
-  <p>Privacy Policy &nbsp;·&nbsp; Last updated: April 2026</p>
+  <p>Privacy Policy &nbsp;·&nbsp; Last updated: May 2026</p>
 </header>
 
 <div class="container">
@@ -252,8 +252,8 @@
       <div class="summary-item">
         <span class="icon">🚫</span>
         <div>
-          <strong>No analytics</strong>
-          <span>No tracking, no crash reports sent</span>
+          <strong>No tracking, no ads</strong>
+          <span>Only anonymous crash diagnostics</span>
         </div>
       </div>
       <div class="summary-item">
@@ -291,8 +291,8 @@
   <section>
     <h2><span class="num">2</span>Data stored on your device</h2>
     <p>
-      All data you enter is stored locally in an encrypted SQLite database on your device.
-      Nothing is uploaded to our servers automatically.
+      All data you enter is stored locally on your device, inside the App's private data directory
+      (which other apps cannot read). Nothing is uploaded to our servers automatically.
     </p>
     <ul>
       <li><strong>Medicine information</strong> — name, dosage, unit, quantity, notes, barcode.</li>
@@ -355,14 +355,60 @@
       you can add medicines manually without triggering any network request.
     </p>
     <p>
-      The App does <strong>not</strong> use any analytics SDK, crash reporting service, advertising
-      network, or any other third-party data collection library.
+      The App does <strong>not</strong> use any analytics SDK, advertising network, or marketing
+      tracker. The single third-party service we use for diagnostics is described in the next
+      section.
     </p>
   </section>
 
-  <!-- 4. Camera & OCR -->
+  <!-- 4. Crash diagnostics -->
   <section>
-    <h2><span class="num">4</span>Camera and image processing</h2>
+    <h2><span class="num">4</span>Crash diagnostics (Firebase Crashlytics)</h2>
+    <p>
+      The App uses <strong>Google Firebase Crashlytics</strong> to collect anonymized crash
+      reports and diagnostic information. This helps us identify and fix problems quickly so the
+      App keeps working reliably on a wide range of devices.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>What is sent</th>
+          <th>What is NOT sent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Crash and non-fatal error stack traces</td>
+          <td>Your medicine names, schedules, notes, or any health data</td>
+        </tr>
+        <tr>
+          <td>App version and build number</td>
+          <td>Your name, email, or phone number</td>
+        </tr>
+        <tr>
+          <td>Android version, device model and manufacturer</td>
+          <td>Persistent advertising identifiers</td>
+        </tr>
+        <tr>
+          <td>A transient IP address used only for delivery</td>
+          <td>Your precise location</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;">
+      Reports are <strong>not linked</strong> to a user identifier. Google retains the data for
+      approximately 90 days for diagnostic purposes. See Google's privacy practices at
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.
+    </p>
+    <p>
+      Crashlytics is the only third-party diagnostic service used. Crash collection is disabled
+      automatically in development builds.
+    </p>
+  </section>
+
+  <!-- 5. Camera & OCR -->
+  <section>
+    <h2><span class="num">5</span>Camera and image processing</h2>
     <p>
       The App requests access to your device camera for two optional features:
     </p>
@@ -380,9 +426,9 @@
     <p>Photos taken for scanning are not saved to your gallery and are deleted after processing.</p>
   </section>
 
-  <!-- 5. Notifications -->
+  <!-- 6. Notifications -->
   <section>
-    <h2><span class="num">5</span>Notifications</h2>
+    <h2><span class="num">6</span>Notifications</h2>
     <p>
       The App sends local push notifications to remind you to take your medicines at the scheduled
       times. These notifications are generated entirely on your device — no notification content
@@ -393,9 +439,9 @@
     </p>
   </section>
 
-  <!-- 6. Backup & export -->
+  <!-- 7. Backup & export -->
   <section>
-    <h2><span class="num">6</span>Backup and export</h2>
+    <h2><span class="num">7</span>Backup and export</h2>
     <p>
       The App provides an optional manual backup feature that exports your database to a single
       file on your device. You can share this file using your device's native share sheet
@@ -411,9 +457,9 @@
     </p>
   </section>
 
-  <!-- 7. Permissions -->
+  <!-- 8. Permissions -->
   <section>
-    <h2><span class="num">7</span>Device permissions</h2>
+    <h2><span class="num">8</span>Device permissions</h2>
     <table>
       <thead>
         <tr>
@@ -454,9 +500,9 @@
     </p>
   </section>
 
-  <!-- 8. Data retention & deletion -->
+  <!-- 9. Data retention & deletion -->
   <section>
-    <h2><span class="num">8</span>Data retention and deletion</h2>
+    <h2><span class="num">9</span>Data retention and deletion</h2>
     <p>
       All data is stored locally on your device for as long as you use the App. You can delete
       individual medicines, schedules, and history entries from within the App at any time.
@@ -467,9 +513,9 @@
     </p>
   </section>
 
-  <!-- 9. Children -->
+  <!-- 10. Children -->
   <section>
-    <h2><span class="num">9</span>Children's privacy</h2>
+    <h2><span class="num">10</span>Children's privacy</h2>
     <p>
       The App is not directed at children under the age of 13. We do not knowingly collect any
       personal information from children. If you believe a child has provided personal data through
@@ -477,13 +523,19 @@
     </p>
   </section>
 
-  <!-- 10. Changes -->
+  <!-- 11. Changes -->
   <section>
-    <h2><span class="num">10</span>Changes to this policy</h2>
+    <h2><span class="num">11</span>Changes to this policy</h2>
     <p>
       We may update this Privacy Policy from time to time. Changes will be posted on this page
       with an updated date. We encourage you to review this page periodically.
       Continued use of the App after changes constitutes your acceptance of the updated policy.
+    </p>
+    <p style="font-size:0.85rem; color: var(--muted); margin-top: 14px;">
+      <strong>Revision history</strong><br />
+      May 2026 — Disclosed Firebase Crashlytics for anonymized crash diagnostics. Corrected the
+      description of local storage (App's private data directory, not an encrypted database).<br />
+      April 2026 — Initial publication.
     </p>
   </section>
 
@@ -492,9 +544,12 @@
     <h2>Questions or concerns?</h2>
     <p style="color: var(--muted); margin-top: 6px;">
       If you have any questions about this Privacy Policy or the App's data practices,
-      please open an issue on GitHub:
+      please reach out by email or open an issue on GitHub:
     </p>
     <p style="margin-top: 10px;">
+      <a href="mailto:info.takeapill@gmail.com">info.takeapill@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
       <a href="https://github.com/melsitov/take-a-pill-privacy-policy/issues" target="_blank" rel="noopener">
         github.com/melsitov/take-a-pill-privacy-policy/issues
       </a>
